@@ -1,0 +1,101 @@
+.stageLine {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    height: 50px;
+    align-items: center;
+    padding-left: 10px;
+    box-sizing: border-box;
+    padding-right: 10px;
+}
+.stageLine p {
+    display: block;
+    background-color: white;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 50%;
+    z-index: 99;
+    border: 2px gray solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: gray;
+}
+.activeStage {
+    color: #126cc5!important;
+    border-color: #126cc5!important;
+}
+.stageLine::before {
+    content: '';
+    position: absolute;
+    width: calc(100% - 20px);
+    height: 2px;
+    top: calc(50% - 1px);
+    z-index: 1;
+    background-color: gray;
+}
+.stageOfAddGame {
+    display: flex;
+    flex-direction: column;
+}
+.suggestion {
+    -webkit-box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.522);
+  -moz-box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.522);
+  box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.522);
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    top: 100%;
+    z-index: 1;
+    max-height: 300px;
+    overflow-y: scroll;
+}
+.clientSelect {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 40px;
+    padding: 5px;
+    border-bottom: 1px gray solid;
+    cursor: pointer;
+}
+.clientSelect:hover {
+    background-color: #126cc5;
+    color: white;
+}
+.phoneBox {
+    position: relative;
+}
+.prepayBlock {
+    padding-Top: 10px;
+    padding-bottom: 10px;
+}
+.gameTable {
+    width: 100%;
+    border: 1px #126cc5 solid;
+    border-bottom: none;
+    box-sizing: border-box;
+}
+.row {
+    min-height: 40px;
+    border-bottom: 1px #126cc5 solid;
+    display: flex;
+}
+.row > div {
+    width: 50%;
+}
+.rowName {
+    border-right: 1px #126cc5 solid;
+}
+.stageNavi {
+    display: flex;
+    width: 100%;
+}
+.stageNavi svg {
+    display: flex;
+    width: 50%;
+}
+.passedStage {
+    color: #126cc5;
+}

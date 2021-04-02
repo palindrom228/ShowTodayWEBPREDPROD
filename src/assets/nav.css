@@ -1,0 +1,234 @@
+.navigator {
+    width: 258px;
+    min-width: 258px;
+    height: 100vh;
+    background-color: rgb(35, 48, 68);
+    display: flex;
+    flex-direction: column;
+    color: white;
+    align-items: center;
+    padding-top: 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+    transition: .3s;
+}
+.handler {
+    position: absolute;
+    right: 0;
+    top: 20px;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    transform: rotate(90deg);
+    margin-bottom: 20px;
+}
+.handler i {
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.handler:hover {
+    color: rgb(98, 153, 230);
+    transition: .3s;
+}
+.navClosed .handler {
+    transform: rotate(0deg);
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navClosed .handler > i {
+    font-size: 26px;
+}
+
+.userData {
+    width: 100%;
+    display: flex;
+    margin-top: auto;
+    height: 70px;
+    align-items: center;
+    box-sizing: border-box;
+    background-color: rgb(25, 35, 49);
+    position: relative;
+    z-index: 10;
+    cursor: pointer;
+}
+.data_box:hover{
+    background-color: rgb(98, 153, 230);
+}
+.data_box {
+    transition: .3s;
+    padding: 20px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    background-color: rgb(25, 35, 49);
+}
+.userMenu {
+    width: 100%;
+    position: absolute;
+    bottom: -200px;
+    z-index: -1;
+    transition: .3s;
+}
+.openMenu {
+    bottom: 70px;
+}
+.userMenu ul > li{
+    list-style: none;
+    background-color: rgb(25, 35, 49);
+    padding: 8px;
+    cursor: pointer;
+    transition: .4s;
+    display: flex;
+    align-items: center;
+}
+.userMenu ul > li > i {
+    width: 20px;
+    font-size: 20px;
+    margin-right: 10px;
+}
+.userMenu ul > li:hover {
+    background-color: rgb(18, 27, 37);
+}
+.brandName{
+    margin-left: auto;
+    width: 70%;
+    cursor: pointer;
+}
+.circleLogo{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: tomato;
+}
+.circleLogo p {
+    text-align: center;
+    vertical-align: middle;
+    width: 100%;
+    height: 100%;
+    font-size: 30px;
+}
+h3{
+    font-size: 18px;
+}
+p{
+    font-size: 14px;
+}
+.menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 10px;
+}
+.menu > P {
+    padding: 10px 20px;
+    color: rgb(197, 197, 197);
+}
+.menu > a {
+    text-decoration: none;
+    color: white;
+    font-family: NotoReg;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: 30px;
+    border-bottom: 1px solid transparent;
+    padding-left: 40px;
+    padding-right: 20px;
+    justify-content: space-between;
+}
+.icon_nav_item > p {
+    font-size: 15px;
+}
+.icon_nav_item {
+    display: flex;
+    align-items: center;
+}
+.menu > a:hover {
+    background-color: rgb(38, 54, 75);
+    transition: .3s;
+}
+.menu > a > div > i {
+    margin-right: 20px;
+    font-size: 25px;
+    width: 23px;
+    color: rgb(70, 98, 136);
+}
+.menu > a > i {
+    font-size: 12px;
+    color:rgb(70, 98, 136);
+}
+.logo p {
+    font-family: NotoThin;
+    color: rgb(197, 197, 197);
+}
+.active {
+    background-color: rgb(38, 54, 75);
+    transition: .3s;
+    color: white;
+}
+.navClosed {
+    min-width: 60px;
+    width: 60px;
+}
+.navClosed h3, .navClosed p {
+    display: none;
+}
+.navClosed .userData > .data_box,
+.navClosed .menu > a {
+    padding: 0;
+}
+
+.navClosed .brandName, 
+.navClosed .fa-circle,
+.navClosed .logo
+{
+    display: none;
+}
+.navClosed .menu > a > .icon_nav_item> i {
+    margin-right: 0!important;
+    font-size: 25px;
+    width: 100%;
+    text-align: center;
+}
+.navClosed .menu > a > .icon_nav_item {
+    width: 100%;
+    
+}
+.navClosed .menu > a {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.navClosed .menu .active,
+.navClosed .menu a:hover{
+    background-color: rgb(60, 83, 114);
+}
+.navClosed .menu > a:hover > .icon_nav_item > i,
+.navClosed .menu >.active > .icon_nav_item > i 
+{
+    transition: .3s;
+    color: rgb(216, 215, 215)!important;
+}
+.navClosed .userData > .data_box{
+    display: flex;
+    justify-content: center;
+}
+.navClosed .userData .userMenu > ul > li > i {
+    margin-right: 0!important;
+}
+.navClosed .userData .userMenu > ul > li {
+    display: flex;
+    justify-content: center;
+    height: 50px;
+}

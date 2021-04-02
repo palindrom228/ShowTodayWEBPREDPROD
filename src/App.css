@@ -1,0 +1,411 @@
+::-webkit-scrollbar {
+    width: 5px; /* ширина для вертикального скролла */ /* высота для горизонтального скролла */
+    background-color: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: #888888;
+    border-radius: 9em;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #2e2e2e;
+    transition: .3s;
+    cursor: pointer;
+  }
+
+/* Указываем box sizing */
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@font-face {
+  font-family: NotoReg;
+  src: url('./assets/fonts/NotoSansJP-Regular.otf');
+}
+@font-face {
+  font-family: NotoMed;
+  src: url('./assets/fonts/NotoSansJP-Medium.otf');
+}
+@font-face {
+  font-family: NotoLight;
+  src: url('./assets/fonts/NotoSansJP-Light.otf');
+}
+@font-face {
+  font-family: NotoBold;
+  src: url('./assets/fonts/NotoSansJP-Bold.otf');
+}
+@font-face {
+  font-family: NotoBLack;
+  src: url('./assets/fonts/NotoSansJP-Black.otf');
+}
+@font-face {
+  font-family: NotoThin;
+  src: url('./assets/fonts/NotoSansJP-Thin.otf');
+}
+h1,h2,h3,h4,p {
+  font-family: NotoReg;
+}
+body {
+  font-family: NotoReg;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#root {
+  width: 100%;
+  display: flex;
+}
+.container { 
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  background-image: url('http://showtoday.ru/assets/images/2020-01-14-rz0gbw.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+.form {
+  width: 30%;
+  height: 100%;
+  box-sizing: border-box;
+  background-color: rgb(255, 253, 253);
+  -webkit-box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.747);
+  -moz-box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.767);
+  box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.774);
+  display: flex;
+  padding: 10px;
+  flex-direction: column;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.form h1 {
+  font-size: 20px;
+  text-align: center;
+}
+.logotitle {
+  color: rgb(250, 187, 70);
+  font-family: NotoBold;
+  font-size: 40px!important;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.autocomplete-dropdown-container {
+  position: absolute;
+  width: 100%;
+  max-height: 200px;
+  overflow-y: scroll;
+  background-color: white;
+  -webkit-box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.747);
+  -moz-box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.767);
+  box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.774);
+  z-index: 99;
+}
+ul,li{
+  margin: 0;
+  padding: 0
+}
+.auto_complete_box{
+  position: relative;
+}
+.auto_complete_item{
+  padding: 5px;
+  border-bottom: 1px rgb(139, 139, 139) solid;
+}
+.auto_complete_item:hover{
+  color: white;
+  transition: .3s;
+  background-color: #066dd3;
+  cursor: pointer;
+}
+.authBox { 
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(92, 17, 243);
+  padding: 20px;
+}
+.authForm {
+  width: 400px;
+  background-color: white;
+  padding: 10px;
+  padding-bottom: 20px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  -webkit-box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.281);
+    -moz-box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.281);
+    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.377);
+}
+.authForm h1,p{
+  text-align: center;
+}
+.authForm h1 {
+  color: #535353;
+  font-family: NotoThin;
+  margin-bottom: 20px;
+}
+.authForm p {
+  color: #888888;
+}
+.content {
+  width: 100%;
+  height: 100vh;
+}
+.content h1 {
+  color: #2e2e2e;
+  font-size: 20px;
+  font-family: NotoThin;
+}
+.content p {
+  color: #727171;
+}
+.header {
+  width: 100%;
+  height: 55px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  box-sizing: border-box;
+}
+.leftSide {
+  display: flex;
+  margin-left: 10px;
+}
+.iconBox {
+  height: 100%;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+.bar {
+  font-size: 20px;
+  cursor: pointer;
+  margin-right: 40px;
+}
+.logo img{
+  -webkit-box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.281);
+  -moz-box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.281);
+  box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.377);
+}
+.nameTag {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-transform: uppercase;
+  justify-content: center;
+}
+.contentBody {
+  background-color: #ffffff;
+  width: 100%;
+  height: calc(100vh - 55px);
+  padding-left: 60px;
+  box-sizing: border-box;
+}
+.rightSide {
+  margin-left: auto;
+  display: flex;
+  padding-right: 30px;
+}
+.rightSide .iconBox{
+  margin-right: 0;
+  margin-left: 5px;
+  cursor: pointer;
+}
+.user {
+  color: #066dd3;
+  font-size: 30px;
+}
+.bell {
+  font-size: 22px!important;
+  color: #535353;
+}
+.navigation {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 260px;
+  height: calc(100vh);
+  padding-top: 5px;
+  background-color: white;
+  z-index: 99;
+  transition: .1s;
+}
+.navigation a {
+  text-decoration: none;
+  color: #000;
+  font-size: 16px;
+}
+.navItem svg {
+  width: 40px;
+  font-size: 22px!important;
+  color: #888888;
+}
+.navItem {
+  height: 35px;
+  display: flex;
+  align-items: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.navItem p {
+  color: #2e2e2e
+}
+.navItem:hover {
+  background-color: #e8e5e5;
+}
+.navigationHead {
+  padding-left: 10px;
+  height: 50px;
+  border-bottom: #c7c5c5 solid 1px;
+}
+.selected .navItem {
+  color: rgb(0,0,0)!important;
+}
+.selected > .navItem svg {
+  color: #066dd3;
+}
+.closed p {
+  display: none!important;
+}
+.closed {
+  width: 60px!important;
+}
+.closed .navItem {
+  display: flex;
+  justify-content: center;
+}
+.closed .iconBox {
+  margin-right: 0;
+}
+.cover {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  z-index: 98;
+  background-color: #0000005f;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+.on {
+  display: block!important;
+}
+.addGameBox {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: white;
+  -webkit-box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.200);
+  -moz-box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.200);
+  box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.200);
+  width: 300px;
+  height: 100vh;
+  z-index: 101;
+  transition: 0.2s;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.addGameBoxHidden {
+  right: -300px;
+}
+.addGameCover {
+  z-index: 100!important;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.268);
+  backdrop-filter: blur(3px);
+  cursor: pointer;
+}
+
+@media (max-width: 1024px){
+  .form{
+      width: 100%;
+  }
+  .authForm {
+    width: 100%;
+  }
+}
