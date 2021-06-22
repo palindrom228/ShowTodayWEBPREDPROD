@@ -14,7 +14,8 @@ const CreateCity = () => {
         password: '',
         type: 2,
         city: '',
-        name: ''
+        name: '',
+        nameOfCity: ''
     })
     const handlechange = (e) => {
         setData({...data, [e.target.name]: e.target.value})
@@ -46,6 +47,10 @@ const CreateCity = () => {
                 <div className="input_block">
                     <input type="text" className='input_form' onChange={handlechange} value={data.name} placeholder=' ' id='name' name='name' />
                     <label htmlFor='name'>Имя</label>
+                </div>
+                <div className="input_block">
+                    <input type="text" className='input_form' onChange={handlechange} value={data.nameOfCity} placeholder=' ' id='nameOfCity' name='nameOfCity' />
+                    <label htmlFor='name'>Название студии</label>
                 </div>
                 <City handler={handler}></City>
                     <input  type="button" className='input_button' name='button' onClick={login} value='Создать' />
